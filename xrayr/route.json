@@ -1,0 +1,55 @@
+{
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+        {
+            "type": "field",
+            "outboundTag": "block",
+            "ip": [
+                "geoip:private"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "block",
+            "protocol": [
+                "bittorrent"
+            ]
+        },
+         {
+            "type": "field",
+            "outboundTag": "netflix",
+            "domain": [
+                "geosite:disney",
+                "fast.com",
+                "netflix",
+                "netflix.com",
+                "netflix.net",
+                "nflxso.net",
+                "nflxext.com",
+                "nflximg.com",
+                "nflximg.net",
+                "nflxvideo.net",
+                "netflixdnstest0.com",
+                "netflixdnstest1.com",
+                "netflixdnstest2.com",
+                "netflixdnstest3.com",
+                "netflixdnstest4.com",
+                "netflixdnstest5.com",
+                "netflixdnstest7.com",
+                "netflixdnstest8.com",
+                "netflixdnstest9.com",
+                "geosite:netflix",
+                "geosite:disney",
+                "cdn.registerdisney.go.com",
+                "disneyplus.com",
+                "disney-plus.net",
+                "bamgrid.com",
+                "dssott.com",
+                "execute-api.us-east-1.amazonaws.com",
+                "geosite:youtube",
+                "geosite:dazn",
+                "geosite:primevideo"
+            ]
+        }
+    ]
+}
