@@ -1,0 +1,26 @@
+[
+    {
+        "tag": "IPv4_out",
+        "sendThrough": "172.16.0.44",
+        "protocol": "freedom"
+    },
+    {
+        "protocol": "blackhole",
+        "tag": "block"
+    },
+    {
+      "protocol": "Shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "hkkt1.linhun11.xyz",
+            "port": 59011,
+            "method": "AES-128-GCM",
+            "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
+            
+          }
+        ]
+      },
+      "tag": "netflix"
+    }
+]
