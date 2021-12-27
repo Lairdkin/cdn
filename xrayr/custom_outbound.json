@@ -1,7 +1,7 @@
 [
     {
         "tag": "IPv4_out",
-        "sendThrough": "172.16.0.44",
+        "sendThrough": "0.0.0.0",
         "protocol": "freedom"
     },
     {
@@ -15,7 +15,7 @@
           {
             "address": "hkkt1.linhun11.xyz",
             "port": 59011,
-            "method": "AES-128-GCM",
+            "method": "AES-256-GCM",
             "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
             
           }
