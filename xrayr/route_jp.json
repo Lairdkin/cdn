@@ -1,0 +1,38 @@
+{
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+        {
+            "type": "field",
+            "outboundTag": "block",
+            "ip": [
+                "geoip:private"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "block",
+            "protocol": [
+                "bittorrent"
+            ]
+        }, {
+            "type": "field",
+            "outboundTag": "netflix",
+            "domain": [
+                "geosite:netflix",
+                "geosite:dazn",
+                "geosite:primevideo",
+                "geosite:abema",
+                "geosite:cygames",
+                "geosite:hulu",
+                "geosite:dmm",
+                "geosite:tiktok"
+            ]
+        },{
+            "type": "field",
+            "outboundTag": "disney",
+            "domain": [
+                "geosite:disney"
+            ]
+        }
+    ]
+}
