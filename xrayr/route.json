@@ -19,7 +19,6 @@
             "type": "field",
             "outboundTag": "netflix",
             "domain": [
-                "geosite:disney",
                 "fast.com",
                 "netflix",
                 "netflix.com",
@@ -39,16 +38,22 @@
                 "netflixdnstest8.com",
                 "netflixdnstest9.com",
                 "geosite:netflix",
-                "geosite:disney",
-                "cdn.registerdisney.go.com",
-                "disneyplus.com",
-                "disney-plus.net",
                 "bamgrid.com",
                 "dssott.com",
                 "execute-api.us-east-1.amazonaws.com",
                 "geosite:youtube",
                 "geosite:dazn",
                 "geosite:primevideo"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "disney",
+            "domain": [
+                "geosite:disney",
+                "cdn.registerdisney.go.com",
+                "disneyplus.com",
+                "disney-plus.net",
             ]
         }
     ]
