@@ -39,6 +39,16 @@ download_config() {
       log INFO "配置文件下载完毕"
 }
 
+config_warp() {
+      warp_config="/etc/XrayR/warp.sh"
+      if [ ! -f "$warp_config"]; then
+            bash <(curl -fsSL git.io/warp.sh) proxy
+            wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
+            echo "*/15 * * * * /bin/sh /etc/XrayR/warp.sh" >> /var/spool/cron/crontabs/root  
+      fi     
+}
+
+
 
 unlockhk() {
       donload_config hk
@@ -48,7 +58,7 @@ unlockhk() {
 
 
 unlockjp() {
-      bash <(curl -fsSL git.io/warp.sh) proxy
+      config_warp
       download_config jp
       /usr/bin/XrayR restart
       log INFO "日本流媒体解锁配置完成"
@@ -56,7 +66,7 @@ unlockjp() {
 
 
 unlockus() {
-      bash <(curl -fsSL git.io/warp.sh) proxy
+      config_warp
       download_config us
       /usr/bin/XrayR restart
       log INFO "美国流媒体解锁配置完成"
@@ -64,7 +74,7 @@ unlockus() {
 
 
 unlocksg() {
-      bash <(curl -fsSL git.io/warp.sh) proxy
+      config_warp
       download_config jp
       /usr/bin/XrayR restart
       log INFO "新加坡流媒体解锁配置完成"
