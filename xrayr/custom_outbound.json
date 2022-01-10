@@ -24,18 +24,13 @@
       "tag": "netflix"
     },
     {
-      "protocol": "Shadowsocks",
+      "protocol": "Socks",
       "settings": {
         "servers": [
           {
-            "address": "hkkt1.linhun11.xyz",
-            "port": 59011,
-            "method": "AES-256-GCM",
-            "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
-            
+            "address": "127.0.0.1",
+            "port": 40000,
           }
         ]
-      },
-      "tag": "disney"
-    }
+     }
 ]
