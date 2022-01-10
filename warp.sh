@@ -13,7 +13,7 @@ function Initialize {
     else
         echo "" > $SESSION
     fi
-    echo -e "Automatic Stream Unlock Monitor Monkey Lite\n"
+    echo -e "萝卜自动warp解锁脚本 \n"
     Test
 }
 
