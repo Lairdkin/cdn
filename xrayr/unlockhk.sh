@@ -44,7 +44,7 @@ config_warp() {
       if [ ! -f "$warp_config"]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
             wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
-            echo "*/15 * * * * /bin/sh /etc/XrayR/warp.sh" >> /var/spool/cron/crontabs/root  
+            echo "*/15 * * * * /bin/sh /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
       fi     
 }
 
