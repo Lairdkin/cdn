@@ -77,6 +77,22 @@ unlockwarp() {
       log INFO "warp解锁配置完成"
 }
 
+Print_Usage() {
+    echo -e "
+萝卜&咸鱼云流媒体解锁脚本
+
+USAGE:
+    bash <(curl -fsSL https://github.com/Lairdkin/cdn/blob/main/xrayr/unlock.sh) [SUBCOMMAND]
+
+SUBCOMMANDS:
+    hk       安装香港流媒体解锁
+    jp       安装日本流媒体解锁
+    us       安装美国流媒体解锁
+    sg       安装新加坡流媒体解锁
+    warp     安装warp通用流媒体解锁
+"
+}
+
 
 if [ $# -ge 1 ]; then
     case ${1} in
