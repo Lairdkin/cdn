@@ -52,7 +52,7 @@ config_warp() {
 
 
 unlockhk() {
-      donload_config hk
+      download_config hk
       /usr/bin/XrayR restart
       log INFO "香港流媒体解锁配置完成"
 }
