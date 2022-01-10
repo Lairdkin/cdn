@@ -42,7 +42,7 @@ download_config() {
 config_warp() {
       rm -rf /usr/local/bin/.netflix_session
       warp_config="/etc/XrayR/warp.sh"
-      if [ ! -f "$warp_config"]; then
+      if [ ! -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
             wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
             echo "*/15 * * * * /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
