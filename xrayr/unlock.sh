@@ -40,7 +40,7 @@ download_config() {
 }
 
 config_warp() {
-      rm -rf /usr/local/bin/.netflix_session
+      
       warp_config="/etc/XrayR/warp.sh"
       if [ ! -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
