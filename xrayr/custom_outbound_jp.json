@@ -1,0 +1,67 @@
+[
+    {
+        "tag": "IPv4_out",
+        "protocol": "freedom"
+    },
+    {
+        "tag": "IPv6_out",
+        "protocol": "freedom",
+        "settings": {
+            "domainStrategy": "UseIPv6"
+        }
+    },
+    {
+        "protocol": "blackhole",
+        "tag": "block"
+    },
+    {
+      "protocol": "Socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "node-jp-cn2-a.wall.rip",
+            "port": 34888,
+            "users": [
+              {
+                "user": "gnL2PzSepD",
+                "pass": "cjBaQJ09ND",
+                "level": 0
+              }
+            ]
+          }
+        ]
+      },
+      "tag": "netflix"
+    },
+    {
+      "protocol": "Socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "210.152.245.48",
+            "port": 37027,
+            "users": [
+              {
+                "user": "vUn4Cqalea",
+                "pass": "UOZHl8NF73",
+                "level": 0
+              }
+            ]
+          }
+        ]
+      },
+      "tag": "disney"
+    },
+    {
+        "protocol": "Socks",
+        "settings": {
+          "servers": [
+            {
+              "address": "127.0.0.1",
+              "port": 40000
+            }
+          ]
+        },
+        "tag": "warp"
+      }
+]
