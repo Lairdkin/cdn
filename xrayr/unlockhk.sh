@@ -49,7 +49,7 @@ unlockhk() {
 
 unlockjp() {
       bash <(curl -fsSL git.io/warp.sh) proxy
-      donload_config jp
+      download_config jp
       /usr/bin/XrayR restart
       log INFO "日本流媒体解锁配置完成"
 }
@@ -57,7 +57,7 @@ unlockjp() {
 
 unlockus() {
       bash <(curl -fsSL git.io/warp.sh) proxy
-      donload_config us
+      download_config us
       /usr/bin/XrayR restart
       log INFO "美国流媒体解锁配置完成"
 }
@@ -65,14 +65,14 @@ unlockus() {
 
 unlocksg() {
       bash <(curl -fsSL git.io/warp.sh) proxy
-      donload_config jp
+      download_config jp
       /usr/bin/XrayR restart
       log INFO "新加坡流媒体解锁配置完成"
 }
 
 unlockwarp() {
       bash <(curl -fsSL git.io/warp.sh) proxy
-      donload_config warp
+      download_config warp
       /usr/bin/XrayR restart
       log INFO "warp解锁配置完成"
 }
