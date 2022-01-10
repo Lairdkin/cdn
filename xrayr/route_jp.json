@@ -26,12 +26,6 @@
                 "geosite:dmm",
                 "geosite:tiktok"
             ]
-        },{
-            "type": "field",
-            "outboundTag": "disney",
-            "domain": [
-                "geosite:disney"
-            ]
         },
         {
             "type": "field",
