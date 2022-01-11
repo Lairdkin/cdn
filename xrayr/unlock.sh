@@ -54,7 +54,8 @@ config_tor(){
     apt install tor
     echo "ExcludeNodes {cn},{hk},{mo},{kp},{ir},{sy},{pk},{cu},{vn}" >> /etc/tor/torrc
     echo "StrictNodes 1" >> /etc/tor/torrc
-    servcie tor nginx
+    service tor restart
+    log INFO "tor配置完成"
 }
 
 
