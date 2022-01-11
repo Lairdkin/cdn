@@ -100,6 +100,13 @@ unlockwarp() {
     log INFO "warp解锁配置完成"
 }
 
+unlocktor() {
+    config_tor
+    download_config tor
+    /usr/bin/XrayR restart
+    log INFO "tor配置完成"
+}
+
 Print_Usage() {
     echo -e "
 萝卜&咸鱼云流媒体解锁脚本
@@ -113,6 +120,7 @@ SUBCOMMANDS:
     us       安装美国流媒体解锁
     sg       安装新加坡流媒体解锁
     warp     安装warp通用流媒体解锁
+    tor      安装tor节点分流
 "
 }
 
@@ -133,6 +141,9 @@ if [ $# -ge 1 ]; then
         ;;
     warp)
         unlockwarp
+        ;;
+    tor)
+        unlocktor
         ;;
     *)
         log ERROR "Invalid Parameters: $*"
