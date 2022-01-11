@@ -39,6 +39,13 @@
                 "netflixdnstest9.com",
                 "geosite:netflix"
             ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "tor",
+            "domain": [
+                "regexp:\\.onion"
+            ]
         }
     ]
 }

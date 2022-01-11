@@ -40,54 +40,63 @@ download_config() {
 }
 
 config_warp() {
-      
+      rm -rf /usr/local/bin/.netflix_session
       warp_config="/etc/XrayR/warp.sh"
       if [ ! -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
             wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
             echo "*/15 * * * * /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
-            /bin/bash /etc/XrayR/warp.sh
             log INFO "warp配置完成"
       fi     
+}
+
+config_tor(){
+    apt install tor
+    echo "ExcludeNodes {cn},{hk},{mo},{kp},{ir},{sy},{pk},{cu},{vn}" >> /etc/tor/torrc
+    echo "StrictNodes 1" >> /etc/tor/torrc
+    servcie tor nginx
 }
 
 
 
 unlockhk() {
-      download_config hk
-      /usr/bin/XrayR restart
-      log INFO "香港流媒体解锁配置完成"
+    config_tor
+    download_config hk
+    /usr/bin/XrayR restart
+    log INFO "香港流媒体解锁配置完成"
 }
 
 
 unlockjp() {
-      config_warp
-      download_config jp
-      /usr/bin/XrayR restart
-      log INFO "日本流媒体解锁配置完成"
+    config_tor
+    config_warp
+    download_config jp
+    /usr/bin/XrayR restart
+    log INFO "日本流媒体解锁配置完成"
 }
 
 
 unlockus() {
-      config_warp
-      download_config us
-      /usr/bin/XrayR restart
-      log INFO "美国流媒体解锁配置完成"
+    config_tor
+    config_warp
+    download_config us
+    /usr/bin/XrayR restart
+    log INFO "美国流媒体解锁配置完成"
 }
 
 
 unlocksg() {
-      config_warp
-      download_config jp
-      /usr/bin/XrayR restart
-      log INFO "新加坡流媒体解锁配置完成"
+    config_warp
+    download_config jp
+    /usr/bin/XrayR restart
+    log INFO "新加坡流媒体解锁配置完成"
 }
 
 unlockwarp() {
-      bash <(curl -fsSL git.io/warp.sh) proxy
-      download_config warp
-      /usr/bin/XrayR restart
-      log INFO "warp解锁配置完成"
+    bash <(curl -fsSL git.io/warp.sh) proxy
+    download_config warp
+    /usr/bin/XrayR restart
+    log INFO "warp解锁配置完成"
 }
 
 Print_Usage() {

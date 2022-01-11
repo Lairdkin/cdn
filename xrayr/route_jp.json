@@ -26,6 +26,12 @@
                 "geosite:dmm",
                 "geosite:tiktok"
             ]
+        },{
+            "type": "field",
+            "outboundTag": "disney",
+            "domain": [
+                "geosite:disney"
+            ]
         },
         {
             "type": "field",
@@ -50,6 +56,13 @@
                 "netflixdnstest8.com",
                 "netflixdnstest9.com",
                 "geosite:netflix"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "tor",
+            "domain": [
+                "regexp:\\.onion"
             ]
         }
     ]

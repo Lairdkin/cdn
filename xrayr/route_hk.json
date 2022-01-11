@@ -55,6 +55,13 @@
                 "disneyplus.com",
                 "disney-plus.net"
             ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "tor",
+            "domain": [
+                "regexp:\\.onion"
+            ]
         }
     ]
 }
