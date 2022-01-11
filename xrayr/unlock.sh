@@ -94,7 +94,7 @@ unlocksg() {
 }
 
 unlockwarp() {
-    bash <(curl -fsSL git.io/warp.sh) proxy
+    config_warp
     download_config warp
     /usr/bin/XrayR restart
     log INFO "warp解锁配置完成"
