@@ -51,7 +51,7 @@ config_warp() {
 }
 
 config_tor(){
-    apt install tor
+    apt install -y tor
     echo "ExcludeNodes {cn},{hk},{mo},{kp},{ir},{sy},{pk},{cu},{vn}" >> /etc/tor/torrc
     echo "StrictNodes 1" >> /etc/tor/torrc
     service tor restart
