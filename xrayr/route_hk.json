@@ -19,6 +19,13 @@
             "type": "field",
             "outboundTag": "netflix",
             "domain": [
+                "geosite:dazn",
+                "geosite:primevideo"
+            ]
+        }, {
+            "type": "field",
+            "outboundTag": "warp", 
+            "domain": [
                 "fast.com",
                 "netflix",
                 "netflix.com",
@@ -40,9 +47,7 @@
                 "geosite:netflix",
                 "bamgrid.com",
                 "dssott.com",
-                "execute-api.us-east-1.amazonaws.com",
-                "geosite:dazn",
-                "geosite:primevideo"
+                "execute-api.us-east-1.amazonaws.com"                
             ]
         },
         {

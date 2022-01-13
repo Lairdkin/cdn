@@ -62,6 +62,7 @@ config_tor(){
 
 unlockhk() {
     config_tor
+    config_warp
     download_config hk
     /usr/bin/XrayR restart
     log INFO "香港流媒体解锁配置完成"
