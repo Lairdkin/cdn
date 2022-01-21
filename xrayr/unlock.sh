@@ -45,14 +45,16 @@ config_warp() {
       if [ ! -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
             wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
-            echo "*/5 * * * * /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
-            
+            sed -i '/warp/d' /var/spool/cron/crontabs/root  
+            echo "0 0/5 * * * ? /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
+            /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1
             log INFO "warp配置完成"
       fi     
 }
 
 config_tor(){
     apt install -y tor
+    sed -i '/Nodes/d' /etc/tor/torrc
     echo "ExcludeNodes {cn},{hk},{mo},{kp},{ir},{sy},{pk},{cu},{vn}" >> /etc/tor/torrc
     echo "StrictNodes 1" >> /etc/tor/torrc
     service tor restart
