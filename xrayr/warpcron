@@ -4,5 +4,5 @@ export PATH
 /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1
 echo "----------------------------------------------------------------------------"
 endDate=`date +"%Y-%m-%d %H:%M:%S"`
-echo "★[$endDate] Successful"
+echo "★[$endDate] NF检测成功，当前IP: $(curl -x socks5://127.0.0.1:40000 -4 ip.p3terx.com/ip -fsL)"
 echo "----------------------------------------------------------------------------"
