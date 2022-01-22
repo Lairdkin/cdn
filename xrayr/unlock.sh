@@ -45,9 +45,11 @@ config_warp() {
       if [ ! -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) proxy
             wget -O /etc/XrayR/warp.sh https://raw.githubusercontent.com/Lairdkin/cdn/main/warp.sh
+            wget -O /etc/XrayR/warpcron https://raw.githubusercontent.com/Lairdkin/cdn/main/xrayr/warpcron
             sed -i '/warp/d' /var/spool/cron/crontabs/root  
-            echo "0 0/5 * * * ? /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
-            /bin/bash /etc/XrayR/warp.sh >> /root/warp.log 2>&1
+            echo "*/5 * * * *  /etc/XrayR/warpcron >> /root/warp.log 2>&1" >> /var/spool/cron/crontabs/root  
+            log INFO "初始化warp ip 请耐心等待"
+            /bin/bash /etc/XrayR/warp.sh
             log INFO "warp配置完成"
       fi     
 }
