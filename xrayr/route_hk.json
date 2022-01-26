@@ -52,7 +52,7 @@
         },
         {
             "type": "field",
-            "outboundTag": "disney",
+            "outboundTag": "netflix",
             "domain": [
                 "geosite:disney",
                 "cdn.registerdisney.go.com",
