@@ -58,7 +58,7 @@ config_warp() {
 uninstall_warp() {
       rm -rf /usr/local/bin/.netflix_session
       warp_config="/etc/XrayR/warp.sh"
-      if [ ! -f "$warp_config" ]; then
+      if [ -f "$warp_config" ]; then
             bash <(curl -fsSL git.io/warp.sh) uninstall
             rm /etc/XrayR/warp.sh 
             rm /etc/XrayR/warpcron
