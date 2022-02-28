@@ -15,42 +15,32 @@
         "tag": "block"
     },
     {
-      "protocol": "Socks",
+      "protocol": "Shadowsocks",
       "settings": {
-        "servers": [
-          {
-            "address": "node-jp-cn2-a.wall.rip",
-            "port": 34888,
-            "users": [
+          "servers": [
               {
-                "user": "gnL2PzSepD",
-                "pass": "cjBaQJ09ND",
-                "level": 0
+                  "address": "dns.jp0.back-fp.icu",
+                  "port": 46666,
+                  "method": "AES-256-GCM",
+                  "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
               }
-            ]
-          }
-        ]
+          ]
       },
-      "tag": "netflix"
+      "tag": "idcf"
     },
     {
-      "protocol": "Socks",
+      "protocol": "Shadowsocks",
       "settings": {
-        "servers": [
-          {
-            "address": "210.152.245.48",
-            "port": 37027,
-            "users": [
+          "servers": [
               {
-                "user": "vUn4Cqalea",
-                "pass": "UOZHl8NF73",
-                "level": 0
+                  "address": "dns.jp1.back-fp.icu",
+                  "port": 46666,
+                  "method": "AES-256-GCM",
+                  "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
               }
-            ]
-          }
-        ]
+          ]
       },
-      "tag": "disney"
+      "tag": "sb"
     },
     {
         "protocol": "Socks",

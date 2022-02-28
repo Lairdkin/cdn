@@ -20,7 +20,21 @@
                 }
             ]
         },
-        "tag": "netflix"
+        "tag": "hgc"
+    },
+    {
+      "protocol": "Shadowsocks",
+      "settings": {
+          "servers": [
+              {
+                  "address": "dns.hk.back-fp.icu",
+                  "port": 47777,
+                  "method": "AES-256-GCM",
+                  "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
+              }
+          ]
+      },
+      "tag": "apernet"
     },
     {
       "protocol": "Socks",

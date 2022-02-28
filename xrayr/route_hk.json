@@ -17,14 +17,14 @@
         },
          {
             "type": "field",
-            "outboundTag": "netflix",
+            "outboundTag": "apernet",
             "domain": [
                 "geosite:dazn",
                 "geosite:primevideo"
             ]
         }, {
             "type": "field",
-            "outboundTag": "warp", 
+            "outboundTag": "apernet", 
             "domain": [
                 "fast.com",
                 "netflix",
@@ -52,7 +52,7 @@
         },
         {
             "type": "field",
-            "outboundTag": "netflix",
+            "outboundTag": "apernet",
             "domain": [
                 "geosite:disney",
                 "cdn.registerdisney.go.com",

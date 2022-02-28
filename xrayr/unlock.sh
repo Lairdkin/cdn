@@ -55,6 +55,21 @@ config_warp() {
       fi     
 }
 
+uninstall_warp() {
+      rm -rf /usr/local/bin/.netflix_session
+      warp_config="/etc/XrayR/warp.sh"
+      if [ ! -f "$warp_config" ]; then
+            bash <(curl -fsSL git.io/warp.sh) uninstall
+            rm /etc/XrayR/warp.sh 
+            rm /etc/XrayR/warpcron
+            sed -i '/warp/d' /var/spool/cron/crontabs/root  
+            download_config default
+            log INFO "warp删除成功"
+      fi     
+}
+
+
+
 config_tor(){
     apt install -y tor
     sed -i '/Nodes/d' /etc/tor/torrc
@@ -76,7 +91,6 @@ unlockhk() {
 
 
 unlockjp() {
-    config_tor
     config_warp
     download_config jp
     /usr/bin/XrayR restart
@@ -85,7 +99,6 @@ unlockjp() {
 
 
 unlockus() {
-    config_tor
     config_warp
     download_config us
     /usr/bin/XrayR restart
@@ -128,7 +141,8 @@ SUBCOMMANDS:
     sg       安装新加坡流媒体解锁
     warp     安装warp通用流媒体解锁
     tor      安装tor节点分流
-"
+    rmwarp   删除warp
+ "
 }
 
 
@@ -151,6 +165,9 @@ if [ $# -ge 1 ]; then
         ;;
     tor)
         unlocktor
+        ;;
+    rmwarp)
+        uninstall_warp
         ;;
     *)
         log ERROR "Invalid Parameters: $*"

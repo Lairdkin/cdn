@@ -16,20 +16,19 @@
             ]
         }, {
             "type": "field",
-            "outboundTag": "netflix",
+            "outboundTag": "idcf",
             "domain": [
                 "geosite:dazn",
                 "geosite:primevideo",
                 "geosite:abema",
-                "geosite:cygames",
                 "geosite:hulu",
-                "geosite:dmm",
                 "geosite:tiktok"
+                
             ]
         },
         {
             "type": "field",
-            "outboundTag": "warp",
+            "outboundTag": "sb",
             "domain": [
                 "fast.com",
                 "netflix",
@@ -49,7 +48,19 @@
                 "netflixdnstest7.com",
                 "netflixdnstest8.com",
                 "netflixdnstest9.com",
-                "geosite:netflix"
+                "geosite:netflix",
+                "geosite:cygames",
+                "geosite:dmm"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "idcf",
+            "domain": [
+                "geosite:disney",
+                "cdn.registerdisney.go.com",
+                "disneyplus.com",
+                "disney-plus.net"
             ]
         },
         {

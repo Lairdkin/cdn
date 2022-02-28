@@ -17,7 +17,7 @@
         }, 
         {
             "type": "field",
-            "outboundTag": "warp",
+            "outboundTag": "fxtransit",
             "domain": [
                 "fast.com",
                 "netflix",

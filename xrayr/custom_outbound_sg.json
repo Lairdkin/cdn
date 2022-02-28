@@ -15,6 +15,20 @@
         "tag": "block"
     },
     {
+      "protocol": "Shadowsocks",
+      "settings": {
+          "servers": [
+              {
+                  "address": "dns.sg.back-fp.icu",
+                  "port": 46666,
+                  "method": "AES-256-GCM",
+                  "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
+              }
+          ]
+      },
+      "tag": "fxtransit"
+    },
+    {
         "protocol": "Socks",
         "settings": {
           "servers": [
