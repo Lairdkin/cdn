@@ -82,8 +82,6 @@ config_tor(){
 
 
 unlockhk() {
-    config_tor
-    config_warp
     download_config hk
     /usr/bin/XrayR restart
     log INFO "香港流媒体解锁配置完成"
@@ -91,7 +89,6 @@ unlockhk() {
 
 
 unlockjp() {
-    config_warp
     download_config jp
     /usr/bin/XrayR restart
     log INFO "日本流媒体解锁配置完成"
@@ -107,8 +104,7 @@ unlockus() {
 
 
 unlocksg() {
-    config_warp
-    download_config jp
+    download_config sg
     /usr/bin/XrayR restart
     log INFO "新加坡流媒体解锁配置完成"
 }
