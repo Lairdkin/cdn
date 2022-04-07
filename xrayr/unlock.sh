@@ -88,6 +88,13 @@ unlockhk() {
 }
 
 
+unlocktw() {
+    download_config tw
+    /usr/bin/XrayR restart
+    log INFO "台湾流媒体解锁配置完成"
+}
+
+
 unlockjp() {
     download_config jp
     /usr/bin/XrayR restart
@@ -152,6 +159,9 @@ if [ $# -ge 1 ]; then
         ;;
     sg)
         unlocksg
+        ;;
+    tw)
+        unlocktw
         ;;
     us)
         unlockus
