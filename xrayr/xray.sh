@@ -217,3 +217,29 @@ fi
 xrayr restart
 echo "对接完成"
 }
+
+Print_Usage() {
+    echo -e "
+小姨子节点配置脚本v0.1
+USAGE:
+    bash <(curl -sSL https://cdn.jsdelivr.net/gh/Lairdkin/cdn@main/xrayr/xray.sh) [SUBCOMMAND]
+SUBCOMMANDS:
+    install       安装香港流媒体解锁
+ "
+}
+
+
+if [ $# -ge 1 ]; then
+    case ${1} in
+    install)
+        install_xrayr_node
+        ;;
+    *)
+        echo "参数错误 $*"
+        Print_Usage
+        exit 1
+        ;;
+    esac
+else
+    Print_Usage
+fi
