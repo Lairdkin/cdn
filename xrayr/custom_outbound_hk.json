@@ -27,10 +27,10 @@
       "settings": {
           "servers": [
               {
-                  "address": "dns.hk.back-fp.icu",
-                  "port": 47777,
-                  "method": "AES-256-GCM",
-                  "password": "84e5e677-fc04-4ef1-a1af-d90c8d07583c"
+                  "address": "46.232.121.158",
+                  "port": 25036,
+                  "method": "chacha20-ietf-poly1305",
+                  "password": "9d41775c-e139-42ed-83d7-b41c9e348554"
               }
           ]
       },
